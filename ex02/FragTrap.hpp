@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 17:11:03 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/30 18:03:39 by emohamed         ###   ########.fr       */
+/*   Created: 2023/10/30 18:02:30 by emohamed          #+#    #+#             */
+/*   Updated: 2023/10/30 18:03:07 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_H
-# define SCAVTRAP_H
 
-#include "ClapTrap.hpp"
+#ifndef FRAGTRAP_H
+# define FRAGTRAP_H
 
-class ScavTrap : protected ClapTrap{
+#include "ScavTrap.hpp"
+
+class FragTrap : protected ScavTrap{
     public:
-        ScavTrap();
-        ScavTrap(std::string name);
-        ~ScavTrap();
-        ScavTrap(ScavTrap const & scav);
+        FragTrap();
+        FragTrap(std::string name);
+        ~FragTrap();
+        FragTrap(FragTrap const & frag);
         
-        void guardGate();
+        void highFivesGuys();
 };
-
 #endif
