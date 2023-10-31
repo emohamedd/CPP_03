@@ -6,7 +6,7 @@ NAME = clapscavtrap
 
 SRCS = $(wildcard *.cpp)
 
-HEADERS = ClapTrap.hpp
+HEADERS = $(wildcard *.hpp)
 
 OBJS = $(SRCS:.cpp=.o)
 
