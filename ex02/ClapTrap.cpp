@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 08:52:41 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/30 10:51:16 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/31 15:25:13 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ ClapTrap::~ClapTrap()
 {
     std::cout << "ClapTrap destructor called" << std::endl;
 }
-ClapTrap::ClapTrap(ClapTrap const & clap)
+ClapTrap::ClapTrap(ClapTrap const & clap) 
 {
     std::cout << "ClapTrap copy constructor called" << std::endl;
     *this = clap;

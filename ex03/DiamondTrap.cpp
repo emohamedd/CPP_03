@@ -1,29 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 17:11:03 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/31 20:43:22 by emohamed         ###   ########.fr       */
+/*   Created: 2023/10/31 18:08:15 by emohamed          #+#    #+#             */
+/*   Updated: 2023/10/31 20:19:17 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_H
-# define SCAVTRAP_H
+#include "DiamondTrap.hpp"
 
-#include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap{
-    public:
-        ScavTrap();
-        ScavTrap(std::string name);
-        ~ScavTrap();
-        ScavTrap(ScavTrap const & scav);
-        
-        void guardGate();
-        void attack(std::string const & target);
-};
-
-#endif
+DiamondTrap::DiamondTrap() : ScavTrap() , FragTrap(){ 
+    std::cout << "DiamondTrap default constructor called" << std::endl;
+}
