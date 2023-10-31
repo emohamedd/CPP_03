@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:11:03 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/30 18:03:39 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/31 13:43:05 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : protected ClapTrap{
+class ScavTrap : public ClapTrap{
     public:
         ScavTrap();
         ScavTrap(std::string name);
         ~ScavTrap();
         ScavTrap(ScavTrap const & scav);
-        
+        // void attack(std::string const & target);
+        // void takeDamage(unsigned int amount);
+        // void beRepaired(unsigned int amount);
         void guardGate();
 };
 
