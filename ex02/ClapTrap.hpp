@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 08:41:28 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/31 20:42:43 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 07:28:17 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class  ClapTrap{
         ClapTrap(std::string name);
         ~ClapTrap();
         ClapTrap(ClapTrap const & clap);
-        std::string getName();
+        ClapTrap & operator=(ClapTrap const & clap);
         // int getHitPoints();
         // int getEnergyPoints();
         // int getAttackDamage();

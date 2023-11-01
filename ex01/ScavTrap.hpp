@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:11:03 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/31 13:43:05 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 07:46:29 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@ class ScavTrap : public ClapTrap{
         ScavTrap(std::string name);
         ~ScavTrap();
         ScavTrap(ScavTrap const & scav);
+        ScavTrap & operator=(ScavTrap const & scav);
         // void attack(std::string const & target);
         // void takeDamage(unsigned int amount);
         // void beRepaired(unsigned int amount);
         void guardGate();
+        void attack(std::string const & target);
 };
 
 #endif

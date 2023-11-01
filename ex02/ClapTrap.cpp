@@ -6,42 +6,13 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 08:52:41 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/31 15:25:13 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 07:29:53 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-// int ClapTrap::getHitPoints()
-// {
-//     return (this->hitPoints);
-// }
 
-// int ClapTrap::getAttackDamage()
-// {
-//     return (this->attackDamage);
-// }
-// int ClapTrap::getEnergyPoints()
-// {
-//     return (this->energyPoints);
-// }
-
-// void ClapTrap::setAttackDamage(int attack)
-// {
-//     this->attackDamage = attack;
-// }
-// void ClapTrap::setEnergyPoints(int energy)
-// {
-//     this->energyPoints  =  energy;
-// }
-// void ClapTrap::setHitPoints(int hit)
-// {
-//     this->hitPoints = hit;
-// }
-// void ClapTrap::setName(std::string name)
-// {
-//     this->name = name;
-// }
 ClapTrap::ClapTrap()
 {
     std::cout << "ClapTrap default constructor called" << std::endl;
@@ -50,6 +21,16 @@ ClapTrap::ClapTrap()
     this->energyPoints = 10;
     this->attackDamage = 0;
 }
+ClapTrap& ClapTrap::operator=(ClapTrap const & clap)
+{
+    std::cout << "ClapTrap assignation operator called" << std::endl;
+    this->name = clap.name;
+    this->hitPoints = clap.hitPoints;
+    this->energyPoints = clap.energyPoints;
+    this->attackDamage = clap.attackDamage;
+    return (*this);
+}
+
 ClapTrap::ClapTrap(std::string name)
 {
     std::cout << "ClapTrap constructor called" << std::endl;

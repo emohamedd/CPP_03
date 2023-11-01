@@ -6,42 +6,12 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 08:52:41 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/30 10:51:16 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 07:28:38 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-// int ClapTrap::getHitPoints()
-// {
-//     return (this->hitPoints);
-// }
-
-// int ClapTrap::getAttackDamage()
-// {
-//     return (this->attackDamage);
-// }
-// int ClapTrap::getEnergyPoints()
-// {
-//     return (this->energyPoints);
-// }
-
-// void ClapTrap::setAttackDamage(int attack)
-// {
-//     this->attackDamage = attack;
-// }
-// void ClapTrap::setEnergyPoints(int energy)
-// {
-//     this->energyPoints  =  energy;
-// }
-// void ClapTrap::setHitPoints(int hit)
-// {
-//     this->hitPoints = hit;
-// }
-// void ClapTrap::setName(std::string name)
-// {
-//     this->name = name;
-// }
 ClapTrap::ClapTrap()
 {
     std::cout << "ClapTrap default constructor called" << std::endl;
@@ -74,9 +44,9 @@ void ClapTrap::attack(std::string const& target)
     int energy = this->energyPoints;
     this->energyPoints -= 1;
     std::cout << "ClapTrap " << this->name << " lose " << energy - this->energyPoints << " energy points" << std::endl;
-    if (this->hitPoints == 0 || this->energyPoints == 0)
+    if (this->hitPoints <= 0 || this->energyPoints <= 0)
     {
-        std::cout << "No point Left" << std::endl;
+         std::cout << "ScavTrap " << this->name << " is dead" << std::endl;    
         return;
     }
 }
@@ -103,4 +73,13 @@ void ClapTrap::beRepaired(unsigned int amount)
         std::cout << "No point Left" << std::endl;
         return;
     }
+}
+ClapTrap & ClapTrap::operator=(ClapTrap const & clap)
+{
+    std::cout << "ClapTrap assignation operator called" << std::endl;
+    this->name = clap.name;
+    this->hitPoints = clap.hitPoints;
+    this->energyPoints = clap.energyPoints;
+    this->attackDamage = clap.attackDamage;
+    return (*this);
 }
