@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 08:52:41 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/01 15:38:01 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 17:02:37 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ ClapTrap::ClapTrap(ClapTrap const & clap)
 void ClapTrap::attack(std::string const& target)
 {
     std::cout << "\033[32mClapTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage! 🔪\033[0m" << std::endl;
-    // this->hitPoints -= this->attackDamage;
     if (this->hitPoints <= 0 || this->energyPoints <= 0)
     {
         if (this->hitPoints <= 0)

@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 08:41:28 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/01 16:11:03 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 16:18:30 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class  ClapTrap{
         void beRepaired(unsigned int amount);
          ClapTrap();
         ClapTrap(std::string name);
-        virtual ~ClapTrap();
+         ~ClapTrap();
         ClapTrap(ClapTrap const & clap);
         ClapTrap & operator=(ClapTrap const & clap);
         

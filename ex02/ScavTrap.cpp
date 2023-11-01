@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:34:44 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/01 15:51:47 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 17:08:16 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ ScavTrap::ScavTrap(ScavTrap const & scav) : ClapTrap(scav){
 }
 ScavTrap::ScavTrap(std::string name)
 {
+    std::cout << "ScavTrap name constructor called" << std::endl;
     this->name = name;
     this->hitPoints = 100;
     this->energyPoints = 50;
@@ -43,7 +44,6 @@ void ScavTrap::guardGate(){
 void ScavTrap::attack(std::string const& target)
 {
     std::cout << "\033[32mScavTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage! 🔪\033[0m" << std::endl;
-    // this->hitPoints -= this->attackDamage;
     if (this->hitPoints <= 0 || this->energyPoints <= 0)
     {
         if (this->hitPoints <= 0)
@@ -63,12 +63,9 @@ void ScavTrap::attack(std::string const& target)
 
 ScavTrap & ScavTrap::operator=(ScavTrap const & scav){
     std::cout << "ScavTrap assignation operator called" << std::endl;
-    // if (this != &scav)
-    // {
         this->name = scav.name;
         this->hitPoints = scav.hitPoints;
         this->energyPoints = scav.energyPoints;
         this->attackDamage = scav.attackDamage;
-    // }
     return *this;
 }

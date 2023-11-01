@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:34:44 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/01 16:01:35 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 17:07:29 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,9 @@ void ScavTrap::attack(std::string const& target)
 
 ScavTrap & ScavTrap::operator=(ScavTrap const & scav){
     std::cout << "ScavTrap assignation operator called" << std::endl;
-    // if (this != &scav)
-    // {
         this->name = scav.name;
         this->hitPoints = scav.hitPoints;
         this->energyPoints = scav.energyPoints;
         this->attackDamage = scav.attackDamage;
-    // }
     return *this;
 }

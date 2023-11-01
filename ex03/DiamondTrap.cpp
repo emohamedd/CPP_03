@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:08:15 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/01 12:37:05 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 17:01:54 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ DiamondTrap::DiamondTrap(DiamondTrap const & diamond) : ScavTrap(diamond) , Frag
     
 void DiamondTrap::whoAmI(){
     std::cout << "DiamondTrap name is " << this->name << std::endl;
-    std::cout << "DiamondTrap ClapTrap name is " << ClapTrap::name << std::endl;
+    std::cout << " ClapTrap name from DiamondTrapis  " << ClapTrap::name << std::endl;
 }
 
 DiamondTrap & DiamondTrap::operator=(DiamondTrap const & diamond){
