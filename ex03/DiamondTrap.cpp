@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:08:15 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/01 11:29:11 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 12:37:05 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,3 +41,11 @@ void DiamondTrap::whoAmI(){
     std::cout << "DiamondTrap ClapTrap name is " << ClapTrap::name << std::endl;
 }
 
+DiamondTrap & DiamondTrap::operator=(DiamondTrap const & diamond){
+    std::cout << "DiamondTrap assignation operator called" << std::endl;
+    this->name = diamond.name;
+    this->hitPoints = diamond.hitPoints;
+    this->energyPoints = diamond.energyPoints;
+    this->attackDamage = diamond.attackDamage;
+    return *this;
+}

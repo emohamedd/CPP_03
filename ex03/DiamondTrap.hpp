@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:03:02 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/01 08:55:30 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 12:36:57 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class DiamondTrap : public ScavTrap, public FragTrap{
         DiamondTrap(std::string name);
         ~DiamondTrap();
         DiamondTrap(DiamondTrap const & diamond);
+        DiamondTrap & operator=(DiamondTrap const & diamond);
         // void setter(std::string name);
         
         void whoAmI();
