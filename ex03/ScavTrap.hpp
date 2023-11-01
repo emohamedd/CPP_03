@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:11:03 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/01 07:19:16 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 08:52:49 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap{
+class ScavTrap : virtual public ClapTrap{
     public:
         ScavTrap();
         ScavTrap(std::string name);

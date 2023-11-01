@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:02:30 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/01 07:18:19 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 08:56:22 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 # define FRAGTRAP_H
 
 #include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
-class FragTrap : public ScavTrap{
+class FragTrap : virtual public ClapTrap{
     public:
         FragTrap();
         FragTrap(std::string name);

@@ -6,13 +6,13 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:03:41 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/31 18:01:48 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 11:30:00 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : ScavTrap(){
+FragTrap::FragTrap(){
     std::cout << "FragTrap default constructor called" << std::endl;
     this->hitPoints = 100;
     this->energyPoints = 100;
@@ -31,7 +31,7 @@ FragTrap::~FragTrap(){
     std::cout << "FragTrap destructor called" << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap const & frag) : ScavTrap(frag){
+FragTrap::FragTrap(FragTrap const & frag) : ClapTrap(frag){
     std::cout << "FragTrap copy constructor called" << std::endl;
     *this = frag;
 }

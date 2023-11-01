@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:03:02 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/01 07:20:25 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 08:55:30 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,4 @@ class DiamondTrap : public ScavTrap, public FragTrap{
         void whoAmI();
     private:
         std::string name;
-        int hitPoints;
-        int energyPoints;
-        int attackDamage;
 };
