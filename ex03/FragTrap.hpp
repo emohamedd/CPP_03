@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:02:30 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/01 08:56:22 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/01 12:21:18 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
-class FragTrap : virtual public ClapTrap{
+class FragTrap : virtual protected ClapTrap{
     public:
         FragTrap();
         FragTrap(std::string name);
